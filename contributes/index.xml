@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PhoenixAutotest Docs</title>
-    <link>http://autotest.surenpi.com/contributes/</link>
+    <link>http://phoenix-autotest.github.io/phoenix.docs.site/contributes/</link>
     <description>Recent content on PhoenixAutotest Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="http://autotest.surenpi.com/contributes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://phoenix-autotest.github.io/phoenix.docs.site/contributes/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
