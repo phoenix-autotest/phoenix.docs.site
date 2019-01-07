@@ -2,13 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PhoenixAutotest Docs</title>
-    <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/</link>
+    <link>http://phoenix-autotest.github.io/phoenix.docs/docs/</link>
     <description>Recent content on PhoenixAutotest Docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="http://phoenix-autotest.github.io/phoenix.docs.site/docs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://phoenix-autotest.github.io/phoenix.docs/docs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>快速入门</title>
+      <link>http://phoenix-autotest.github.io/phoenix.docs/docs/quick-start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://phoenix-autotest.github.io/phoenix.docs/docs/quick-start/</guid>
+      <description>前言 本文档主要介绍selenium自动化框架PhoenixAutotest，并且会用一个简单的demo来描述如何使用该框架。
+使用框架你需要了解的知识  开发者工具 IntelliJ IDEA   本文档是基于idea来编写的，而且会使用骨架，推荐使用idea。
+如果您对其他环境很熟悉，可以选择其他工具。
+2. java基础
+3. selenium知识
+本框架主要对selenium封装，但你需要了解selenium相关知识。
+框架及相关介绍  框架是基于selenium的web自动化框架，通过该框架可以简化测试人员的学习难度，只需要编写少量的JAVA代码即可。 框架地址
+github地址：https://github.com/LinuxSuRen/phoenix.webui.framework
+如果您需要查看源码，可以使用上面地址下载框架，如果刚刚入门，建议使用骨架。
+ webdriver驱动下载器源码地址
+github地址：https://github.com/LinuxSuRen/autotest.webdriver.downloader 自动化测试骨架的maven仓库地址
+http://mvnrepository.com/artifact/com.surenpi.autotest/autotest.web.framework.archetype   使用骨架创建一个自动化测试工程  使用idea添加骨架
+ 使用骨架创建maven项目
+ 项目创建完成后，idea会自动下载，更新完成后的项目结构如下：
+  运行一个小demo  pom.xml文件中加入downloader依赖  &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.surenpi.autotest&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;autotest.webdriver.downloader&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0.2-20180128&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;  设置浏览器版本及地址
+在文件夹resources下，设置engine.properties文件内容为：
+engine.autoLoad=true chrome.version=64  版本号输入您所在电脑的谷歌浏览器版本
+ 修改Test类中的Page类路径
+ 运行Test类（GitHubTest 或 OSCTTest）
+Page类 定义入口及配置类，页面元素
+Test类 定义流程
+ 运行成功后，chrome浏览器打开后访问url地址，搜索内容，并关闭浏览器。
+  可能遇到的问题 如果运行demo后，启动浏览器后，但弹出chromedriver.</description>
+    </item>
     
   </channel>
 </rss>
