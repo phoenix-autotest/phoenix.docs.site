@@ -24,12 +24,52 @@
   </url>
   
   <url>
+    <loc>http://phoenix-autotest.github.io/phoenix.docs.site/docs/selenium%E5%8E%9F%E7%94%9Fapi/</loc>
+  </url>
+  
+  <url>
     <loc>http://phoenix-autotest.github.io/phoenix.docs.site/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D/</loc>
+  </url>
+  
+  <url>
+    <loc>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE/</loc>
+  </url>
+  
+  <url>
+    <loc>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E5%8F%82%E6%95%B0%E5%8C%96/</loc>
+  </url>
+  
+  <url>
+    <loc>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E5%A4%96%E9%83%A8%E6%89%A7%E8%A1%8C%E5%99%A8/</loc>
+  </url>
+  
+  <url>
     <loc>http://phoenix-autotest.github.io/phoenix.docs.site/docs/quick-start/</loc>
+  </url>
+  
+  <url>
+    <loc>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E6%95%B0%E6%8D%AE%E6%BA%90/</loc>
+  </url>
+  
+  <url>
+    <loc>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E6%B5%8B%E8%AF%95%E5%A5%97%E4%BB%B6/</loc>
+  </url>
+  
+  <url>
+    <loc>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A9%B1%E5%8A%A8%E5%85%BC%E5%AE%B9/</loc>
+  </url>
+  
+  <url>
+    <loc>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E8%AF%BE%E7%A8%8B/</loc>
+  </url>
+  
+  <url>
+    <loc>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E9%AA%A8%E6%9E%B6/</loc>
   </url>
   
 </urlset>

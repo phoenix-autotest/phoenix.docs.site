@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
      
-    <title>快速入门 | PhoenixAutotest Docs</title>
+    <title>自动化测试课程 | PhoenixAutotest Docs</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
 
@@ -27,24 +27,24 @@
     display: inline;
   }
 </style>
-<meta property="og:title" content="快速入门" />
-<meta property="og:description" content="自动化框架PhoenixAutotest快速入门" />
+<meta property="og:title" content="自动化测试课程" />
+<meta property="og:description" content="自动化测试课程" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://phoenix-autotest.github.io/phoenix.docs.site/docs/quick-start/" />
+<meta property="og:url" content="http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E8%AF%BE%E7%A8%8B/" />
 
-<meta itemprop="name" content="快速入门">
-<meta itemprop="description" content="自动化框架PhoenixAutotest快速入门">
+<meta itemprop="name" content="自动化测试课程">
+<meta itemprop="description" content="自动化测试课程">
 
 
 
-<meta itemprop="wordCount" content="63">
+<meta itemprop="wordCount" content="30">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="快速入门"/>
-<meta name="twitter:description" content="自动化框架PhoenixAutotest快速入门"/>
+<meta name="twitter:title" content="自动化测试课程"/>
+<meta name="twitter:description" content="自动化测试课程"/>
 
 
 
@@ -136,22 +136,27 @@
 		<p class="b">此页面上的内容</p>
   	<nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#介绍">介绍</a></li>
+<li><a href="#基础理论">基础理论</a></li>
+<li><a href="#编程">编程</a>
 <ul>
-<li><a href="#前言">前言</a></li>
-<li><a href="#使用框架你需要了解的知识">使用框架你需要了解的知识</a></li>
-<li><a href="#框架及相关介绍">框架及相关介绍</a></li>
-<li><a href="#使用骨架创建一个自动化测试工程">使用骨架创建一个自动化测试工程</a></li>
-<li><a href="#运行一个小demo">运行一个小demo</a></li>
-<li><a href="#可能遇到的问题">可能遇到的问题</a></li>
+<li><a href="#java">Java</a></li>
+<li><a href="#xml">XML</a></li>
 </ul></li>
+<li><a href="#数据库">数据库</a></li>
+<li><a href="#应用服务器">应用服务器</a></li>
+<li><a href="#工具">工具</a>
+<ul>
+<li><a href="#maven">Maven</a></li>
+</ul></li>
+<li><a href="#方案">方案</a></li>
 </ul>
 </nav>
 	
 
 	<div date-pref>
 		
-			<a href="http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E5%A4%96%E9%83%A8%E6%89%A7%E8%A1%8C%E5%99%A8/" class="dib f6 pl1 hover-bg-light-gray br-100" title="外部执行器 ">
+			<a href="http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A9%B1%E5%8A%A8%E5%85%BC%E5%AE%B9/" class="dib f6 pl1 hover-bg-light-gray br-100" title="浏览器驱动兼容 ">
 				<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -161,7 +166,7 @@
 		
 
 		
-			<a href="http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E6%95%B0%E6%8D%AE%E6%BA%90/" class="dib f6 pr1 hover-bg-light-gray br-100" title="数据源">
+			<a href="http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E9%AA%A8%E6%9E%B6/" class="dib f6 pr1 hover-bg-light-gray br-100" title="骨架">
 			<svg class="fill-current" height="30px" viewBox="0 0 24 24" width="30px" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     <path d="M0 0h24v24H0z" fill="none"/>
@@ -180,13 +185,13 @@
           </div>
           <header class="flex-none w-100">
   
-  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">快速入门</h1>
+  <h1 class="lh-title mb3 mv0 pt3 primary-color-dark">自动化测试课程</h1>
 </header>
 
 <aside class="bt bw1 pt3 mt2 mid-gray b--mid-gray fn w-100">
   
     <div class="f4 fw4 lh-copy">
-      自动化框架PhoenixAutotest快速入门
+      自动化测试课程
     </div>
   
 
@@ -199,105 +204,57 @@
 
 
 
-<h2 id="前言">前言</h2>
+<h1 id="介绍">介绍</h1>
 
-<p>本文档主要介绍selenium自动化框架PhoenixAutotest，并且会用一个简单的demo来描述如何使用该框架。</p>
+<p>广义来说，自动化测试应该是比较难，它不仅仅是某个方面的测试；可以说，其他的测试手段或许都可以变成自动化的。例如：安全、性能测试等，大多数情况是人工来操作工具，然后获取报告；但，这些人工操作的过程是否可以变成自动的呢。我的看法是，只要技术可以满足，就是有可能的。<br />
+据以上的观点，我这里要介绍的自动化测试课程会涉及很多内容。当然，所有的内容都是以实用为标准。</p>
 
-<h2 id="使用框架你需要了解的知识">使用框架你需要了解的知识</h2>
+<h1 id="基础理论">基础理论</h1>
 
-<ol>
-<li>开发者工具 IntelliJ IDEA
-<br /></li>
-</ol>
+<p>这里的基础理论大致包括：操作系统、协议等。<br />
+不管是做接口测试还是性能测试，如果对原理性的东西不了解的话，只能是知道个皮毛。</p>
 
-<p>本文档是基于idea来编写的，而且会使用骨架，推荐使用idea。</p>
+<h1 id="编程">编程</h1>
 
-<p>如果您对其他环境很熟悉，可以选择其他工具。<br />
-2. java基础<br />
-3. selenium知识<br />
-本框架主要对selenium封装，但你需要了解selenium相关知识。</p>
+<p>除了大多数人在热追的Java、Python以外，还会讲解xml、html、JavaScript、批处理文件、shell脚本等。</p>
 
-<h2 id="框架及相关介绍">框架及相关介绍</h2>
+<h2 id="java">Java</h2>
 
-<ol>
-<li>框架是基于selenium的web自动化框架，通过该框架可以简化测试人员的学习难度，只需要编写少量的JAVA代码即可。</li>
-<li>框架地址<br />
-github地址：<a href="https://github.com/LinuxSuRen/phoenix.webui.framework">https://github.com/LinuxSuRen/phoenix.webui.framework</a><br />
-如果您需要查看源码，可以使用上面地址下载框架，如果刚刚入门，建议使用骨架。<br /></li>
-<li>webdriver驱动下载器源码地址<br />
-github地址：<a href="https://github.com/LinuxSuRen/autotest.webdriver.downloader">https://github.com/LinuxSuRen/autotest.webdriver.downloader</a></li>
-<li>自动化测试骨架的maven仓库地址<br />
-<a href="http://mvnrepository.com/artifact/com.surenpi.autotest/autotest.web.framework.archetype">http://mvnrepository.com/artifact/com.surenpi.autotest/autotest.web.framework.archetype</a>
-<br /></li>
-</ol>
+<p>我认为有些内容是测试人员必须要学习的：语法、集合、IO操作、各种配置文件的读写、多线程、Swing。<br />
+而有一些Java框架也是非常值得去学习的。例如：JUnit、TestNG、Dom4j、Spring。</p>
 
-<h2 id="使用骨架创建一个自动化测试工程">使用骨架创建一个自动化测试工程</h2>
+<h2 id="xml">XML</h2>
 
-<ol>
-<li>使用idea添加骨架<br />
-<img src="http://www.pic68.com/uploads/2018/04/1(2).png" alt="image" />
-<img src="http://www.pic68.com/uploads/2018/04/2.png" alt="image" /><br /></li>
-<li>使用骨架创建maven项目<br />
-<img src="http://www.pic68.com/uploads/2018/04/3.png" alt="image" /><br />
-<img src="http://www.pic68.com/uploads/2018/04/4(1).png" alt="image" /><br />
-<img src="http://www.pic68.com/uploads/2018/04/5.png" alt="image" /><br />
-<img src="http://www.pic68.com/uploads/2018/04/6.png" alt="image" /></li>
-<li>项目创建完成后，idea会自动下载，更新完成后的项目结构如下：<br />
-<img src="http://www.pic68.com/uploads/2018/04/7.png" alt="image" /><br /></li>
-</ol>
+<p>XML作为一个非常流行的数据交换的格式，是非常重要的。我们至少要了解XML的语法、读写等。</p>
 
-<h2 id="运行一个小demo">运行一个小demo</h2>
+<p>我没有把Selenium这个比较火热的WebUI自动化测试框架放在第一位上，是因为，编程是基础，是制约你继续前进的因素。只要把你的编程能力提升起来很多框架都不是问题了。<br />
+至于一些框架，包括有：Selenium等。</p>
 
-<ol>
-<li>pom.xml文件中加入downloader依赖
-<code>
-&lt;dependency&gt;
-&lt;groupId&gt;com.surenpi.autotest&lt;/groupId&gt;
-&lt;artifactId&gt;autotest.webdriver.downloader&lt;/artifactId&gt;
-&lt;version&gt;1.0.2-20180128&lt;/version&gt;
-&lt;/dependency&gt;
-</code></li>
+<h1 id="数据库">数据库</h1>
 
-<li><p>设置浏览器版本及地址<br />
-在文件夹resources下，设置engine.properties文件内容为：</p>
+<p>MySQL、Oracle、嵌入式数据库。</p>
 
-<pre><code>engine.autoLoad=true
-chrome.version=64  
-</code></pre>
+<h1 id="应用服务器">应用服务器</h1>
 
-<p>版本号输入您所在电脑的谷歌浏览器版本</p></li>
+<p>Tomcat、Jetty、Nginx、Apache等。<br />
+对于Web项目来说，都需要一个或者多个应用服务器来做支撑。而熟悉这些服务器的特点，学会进行配置，是非常重要的；尤其，你不希望永远只做黑盒测试。</p>
 
-<li><p>修改Test类中的Page类路径<br />
-<img src="http://pic68.com/uploads/2018/05/1_1.png" alt="image" /></p></li>
+<h1 id="工具">工具</h1>
 
-<li><p>运行Test类（GitHubTest 或 OSCTTest）<br />
-Page类 定义入口及配置类，页面元素<br />
-<img src="http://pic68.com/uploads/2018/05/1525252207_1_.png" alt="image" />
-Test类 定义流程<br />
-<img src="http://pic68.com/uploads/2018/05/20180502172300.png" alt="image" /></p></li>
+<p>Eclipse、Jenkins等。<br />
+测试工具层出不穷，也断然是学习不完的，而终极办法就是——学会开发（改造）适合自己、团队的工具。<br />
+Eclipse是个比较流行的开发工具，实践证明，很多人都会在开发工具的配置和使用上遇到很多问题，甚至直接导致放弃。<br />
+Jenkins是个持续集成的平台。</p>
 
-<li><p>运行成功后，chrome浏览器打开后访问url地址，搜索内容，并关闭浏览器。<br />
-<img src="http://ww1.sinaimg.cn/large/87c01ec7gy1fqy6pyz0oxg20zk0k0u0x.gif" alt="image" /></p></li>
-</ol>
+<h2 id="maven">Maven</h2>
 
-<h2 id="可能遇到的问题">可能遇到的问题</h2>
+<p>Maven在项目管理（依赖、版本发布等）上使用的还是比较广泛的，也值得每位希望使用Java语言学习自动化测试的朋友们来多多研究。Maven可以在Eclipse或者其他开发工具中使用，也可以在命令行中使用。</p>
 
-<p>如果运行demo后，启动浏览器后，但弹出chromedriver.exe停止工作，是驱    动与版本不对应，请删除用户文件夹下的.autotest目录，并重新运行项目。<br />
-<img src="http://pic68.com/uploads/2018/05/20180502180956.png" alt="image" /></p>
+<h1 id="方案">方案</h1>
 
-<p>如果最新版本驱动下载器不支持您当前的浏览器版本，可关闭自动下载驱动，手动下载驱动并在src/main/resources下的engine.properties文件中指定驱动路径。</p>
+<p>任何工具都可能是针对特定场景、特定领域的，它不一定能很好地解决您目前遇到的问题，尤其当问题比较复杂、跨度大的时候。那么，这时候，你可以把多个工具改造，使用每个现有工具的一部分功能，然后整合起来。这样，就需要搭建一套特定业务的框架或者平台了。</p>
 
-<pre><code>engine.autoLoad=false
-webdriver.chrome.driver=C:/Users/home/surenpi/.autotest/surenpi.com.chromedriver
-</code></pre>
-
-<p>如果运行demo后，无法正常关闭浏览器，请将shutdown方法修改为close方法,如下：</p>
-
-<pre><code>try {
-phoenix.close();
-} catch (IOException e) {
-e.printStackTrace();
-</code></pre>
+<p>持续更新中。。。请关注、收藏！</p>
 
 </div>
 
@@ -322,14 +279,14 @@ e.printStackTrace();
   <div class="w-100 bg-light-gray">
     <div class="mw7 pa4 center nested-lh-copy lh-copy">
       <h6 class="f4 dark-gray mb2">
-  <a href="http://phoenix-autotest.github.io/phoenix.docs.site/docs/quick-start/" class="hide-child link primary-color">
+  <a href="http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E8%AF%BE%E7%A8%8B/" class="hide-child link primary-color">
   <span class="nl3 child"><svg class="grow" fill="" height="14px" viewBox="0 0 24 24" width="14px" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
 </span>
-    “快速入门”
+    “自动化测试课程”
   </a> was last updated: January 1, 0001
 </h6>
 
-      <a href="edit/master/content/docs/quick-start.md" class="
+      <a href="edit/master/content/docs/%e8%87%aa%e5%8a%a8%e5%8c%96%e6%b5%8b%e8%af%95%e8%af%be%e7%a8%8b.md" class="
 f6 ph3 pv1 br2 dib  tc ttu mv3 bg-primary-color white hover-bg-green link
 " target="_blank">改善此页</a>
 

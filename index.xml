@@ -11,6 +11,114 @@
     
     
     <item>
+      <title>Selenium原生API</title>
+      <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/selenium%E5%8E%9F%E7%94%9Fapi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://phoenix-autotest.github.io/phoenix.docs.site/docs/selenium%E5%8E%9F%E7%94%9Fapi/</guid>
+      <description>介绍 PhoenixFramework框架在Selenium的基础上做了很多方便用户使用的API，但如果某些特定场景下必须使用Selenium的API，这也是框架所支持的。</description>
+    </item>
+    
+    <item>
+      <title>元素定位</title>
+      <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D/</guid>
+      <description>定位方法 ID、css、Name、xpath、超链接文本（部分）、标签名称（tagName）等。
+更多元素定位技巧请参考
+UI组件 框架封装了一些UI组件，可以简化操作。包括有：文本框（文本域）、按钮、下拉列表、单选按钮组等。
+文本框 框架把文本框和文本域都当做同一类来处理，都是用于输入文本的。但，这里不包括的是一些富文本框。
+它对应的类为Text。
+按钮 这里说的按钮，也不一定就是对应HTML中的按钮，指的是所有用于点击操作的元素。
+它对应的类为Button。
+下拉列表 这里的下拉列表特指HTML中的select元素。您可以根据文本（text）、值（value）、序号（index）来选择特定的选项，另外，框架还提供了随机选择一个选项的功能。如果，在该列表只是个必填项，所选的值不会影响后续的流程的话，就最适合使用随机选择的功能了。
+下拉列表中选项的文本对用户是最直接的，而值则是需要传递给后台用来存储的数据，因此我建议各位测试人员，尽可能使用文本的方式来选择列表。
+它对应的类为Selector。
+单选按钮组 例如：性别的选择这种单选按钮，是需要根据值来选择。而它的定位是要定位到这组单选按钮的父（parent）元素上，我这里说的值指的是每个选项的value属性。
+它对应的类为CheckBoxGroup。
+Ztree 日历控件 策略 框架提供了三种策略来加强元素查找——优先级、区域、循环策略。默认使用的策略是优先级策略。
+优先级 该策略下，框架会优先使用id来定位元素。
+区域 该策略下，框架会先定位一个大的区域，然后再在该区域下定位第二级的元素，以此类推。
+循环 该策略会优先使用id来定位元素，如果找到就返回元素，找不到则继续使用后面的方法来定位。
+配置 xml schema地址http://surenpi.com/schema/autotest/autotest.web.framework.xsd
+点击这里查看如何配置Eclipse智能提示XML</description>
+    </item>
+    
+    <item>
+      <title>参与贡献</title>
+      <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE/</guid>
+      <description>介绍 如果您看好本项目，希望能参与到项目中来的话，将会是非常受欢迎的。
+为了能够更好地让大家参与到开源项目PhoenixFramework中来，下面介绍几种方式： * 贡献issues，您可以在这里提出您的意见或者建议，还有bug * 贡献文档，一个优秀的项目不仅仅是代码质量要好，文档也是必不可少的 * 贡献代码，如果您在使用的过程中发现有缺陷，也可以直接把修正后的代码贡献出来 * 贡献博文，为了能让更多的人了解到本项目，因此受益，您可以在您的博客中介绍本项目
+贡献issues 在提出问题的时候，尽可能把遇到问题的环境因素（操作系统、Java版本、浏览器版本、数据库等）都写清楚，这样才能更加容易复现问题、修正问题。
+如果您愿意帮忙测试PhoenixFramework的兼容性的话，希望能从以下环境中进行测试： * 操作系统，Windows（7，8,10）、Linux（Ubuntu、CentOS、Readhat）、Mac * 浏览器，Firefox、Chrome、IE
+贡献文档 我们在GitHub上的文档是用Markdown的格式来编写的，所以，如果您要给PhoenixFramework贡献文档的话，首先要了解Markdown的语法。
+贡献代码 Java 项目使用Maven来构建，所以，您需要对Maven有了解。对于框架部分，您需要对Spring、Selenium要有了解。
+编码规范：
+所有public修饰的方法必须要有注释，大括号采用上下对齐的方式
+属性注释格式
+/** 状态 */ public static final int FETCH_SUCCESS = 1;  类注释格式（必须要有author标签）
+/** * 用于回调的接口 * @author suren * @date 2017年1月25日 上午11:38:41 */ public interface Callback&amp;lt;T&amp;gt; { void callback(T data); }  赋值符号两边必须各有一个空格，例如：
+String value = locatorMap.get(key);  除有特殊理由外，不允许有多余的换行。每个方法之间使用一个换行，每个方法内部的开头和结尾不允许有换行。
+如果您使用Eclipse作为开发工具的话，请把项目的风格配置文件导入:suren_format.xml、suren_codetemplates.xml
+JavaScript JS的框架使用的是Bootstrap。
+需要遵守的代码规范：</description>
+    </item>
+    
+    <item>
+      <title>参数化</title>
+      <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E5%8F%82%E6%95%B0%E5%8C%96/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E5%8F%82%E6%95%B0%E5%8C%96/</guid>
+      <description>简介 PhoenixAutotest中的参数化技术，包括了对元素定位、数据源的参数化。对于元素定位的参数化，有的场景下同一个页面中的同一个元素在不同的流程中定位方法是不一样的。这时候，为了能够尽可能地复用脚本实现动态定位元素，就需要用到元素定位的参数化。
+在自动化测试脚本的编写过程中，可能需要用到很多数据，而某些数据可能是动态变化的、有规律的（例如：手机、邮箱、身份证等）、不关心具体内容的。这时候，就需要用到参数化来提高脚本的可复用性。简单来说，就是把脚本中可变的部分写在其他地方，避免了要经常修改脚本的工作。
+类型 PhoenixAutotest框架支持很多中类型的参数化，也能满足大多数的情况。但，除此之外用户还可以很方便地进行扩展、自定义；当然自定义部分，您可以看后面的章节。 这里的类型包括：simple、freemarker、properties、page_ref、groovy、javascript、encrypt、callback、sequence等。
+simple 顾名思义，simple为简单实现的一种参数化。可以使用的变量包括：日期、身份证号码、电子邮件、邮编、随机数字等。
+${now}是当前日期的时间戳，为数字形式的日期
+${now yyyy}年份字符串，例如：2017
+${now MM-dd}年份字符串，例如：3-26
+${now yyyy-MM-dd}年份字符串，例如：2017-3-26
+${now MM-dd HH:mm}年份字符串，例如：3-26 12:00
+${now yyyy-MM-dd HH:mm:ss}年份字符串，例如：2017-3-26 12:00:00
+${id_card}身份证号码
+${email}电子邮件
+${phone}手机号码
+${postcode}邮编
+${random-60}随机数字，从0-60的随机数字
+freemarker 使用了该类型后，框架会把数据当作freemarker模板来进行解析。
+properties 把参数化的具体数据会保存在文件dynamic.data.properties中。
+system 这个是全局的参数配置。数据配置在文件system.data.properties中。
+random_text 通过该参数化，您可以把数据存放在data目录下的一个txt文本文件中，会随机返回一行文本字符串。
+page_ref 这种类型，可以让您引用其他Page类中属性的值。
+groovy 框架会把数据当作groovy脚本来解析。
+javascript 框架会把数据当作javascript脚本来解析。
+encrypt 如果您的项目中有比较敏感的数据，可以采用加密的方式。填入的是密文，框架会根据给定的密钥在使用的时候自动解密。采用该类型，需要配置文件encrypt.properties。这里要配置密钥，例如：encrypt.key=123456。
+callback 该类型的参数化实现本身没有任何作用，但是它可以通过传递参数来使用其他任何一种参数化的实现。
+sequence 自定义 可以通过实现接口org.suren.autotest.web.framework.data.DynamicData来添加自定义的参数化实现。</description>
+    </item>
+    
+    <item>
+      <title>外部执行器</title>
+      <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E5%A4%96%E9%83%A8%E6%89%A7%E8%A1%8C%E5%99%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E5%A4%96%E9%83%A8%E6%89%A7%E8%A1%8C%E5%99%A8/</guid>
+      <description>介绍 PhoenixFramework框架为了方便使用一些常用的操作，提出了一个“外部执行器”的概念。下面介绍内置的外部执行器。
+JsInvoker 支持执行js代码。
+KaptchaInvoker 由于大部分图形验证码，都是把图片中的信息保存在session中，随后在登陆时进行匹配来实现的。
+我这里给出的验证码方案，是需要服务端和测试脚本配合使用的。
+服务端 对外暴露一个web服务（http），专门用于获取图形验证码中信息。
+测试脚本 需要在数据源文件中作如下配置：
+&amp;lt;suren:field name=&amp;quot;kaptcha&amp;quot; data=&amp;quot;data,http://localhost/kaptcha!getLastCode.do&amp;quot; type=&amp;quot;callback&amp;quot; callback=&amp;quot;KaptchaInvoker&amp;quot;&amp;gt; &amp;lt;/suren:field&amp;gt;  EngineInvoker 框架引擎。
+OSInvoker 执行操作系统本地命令。
+TestNGInvoker 调用TestNG。</description>
+    </item>
+    
+    <item>
       <title>快速入门</title>
       <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/quick-start/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -39,6 +147,83 @@ Page类 定义入口及配置类，页面元素
 Test类 定义流程
  运行成功后，chrome浏览器打开后访问url地址，搜索内容，并关闭浏览器。
   可能遇到的问题 如果运行demo后，启动浏览器后，但弹出chromedriver.</description>
+    </item>
+    
+    <item>
+      <title>数据源</title>
+      <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E6%95%B0%E6%8D%AE%E6%BA%90/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E6%95%B0%E6%8D%AE%E6%BA%90/</guid>
+      <description>描述 支持的类型 当前支持xml配置的数据源文件。
+配置 xml schema地址http://surenpi.com/schema/datasource/autotest.web.framework.datasource.xsd
+点击这里查看如何配置Eclipse智能提示XML</description>
+    </item>
+    
+    <item>
+      <title>测试套件</title>
+      <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E6%B5%8B%E8%AF%95%E5%A5%97%E4%BB%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E6%B5%8B%E8%AF%95%E5%A5%97%E4%BB%B6/</guid>
+      <description>描述 测试套件是一种描述测试动作的配置文件。
+动作 这里的动作，基本上是在模拟人工进行操作。部分动作支持随机操作，例如：从下拉列表中随机选择一个选项、随机上传一个文件等。
+点击 大部分情况是鼠标单击操作。
+文本填入 下拉列表 框架对于下拉列表的操作支持四种：根据文本、根据值、根据序号、随机。
+文件上传 组合动作 有些UI界面中会有比较复杂的控件，例如：日历、Tree等。可能为了选择一个值需要鼠标点击四五次，而且都是重复性的。框架对于这种情况，也是支持作进一步封装的。
+配置 xml schema地址http://surenpi.com/schema/suite/autotest.web.framework.suite.xsd
+点击这里查看如何配置Eclipse智能提示XML</description>
+    </item>
+    
+    <item>
+      <title>浏览器驱动兼容</title>
+      <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A9%B1%E5%8A%A8%E5%85%BC%E5%AE%B9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A9%B1%E5%8A%A8%E5%85%BC%E5%AE%B9/</guid>
+      <description>简介 框架通过配置的方式，已经做到了浏览器版本和驱动版本的完美匹配，用户无需再关心驱动的问题。而且，用户也无需自己来下载驱动文件，框架会根据匹配规则来自动从服务器上下来对应的驱动文件。
+配置 框架通过配置文件driver.mapping.xml来对操作系统、浏览器版本、驱动版本进行匹配。
+您只要在文件engine.properties中配置好您当前操作系统中所安装的浏览器版本，框架就会自动去服务器上下载最合适的驱动。例如：chrome.version=56。
+文件driver.mapping.xml和engine.properties都在框架中有，如果您需要自己修改特定的参数，可以在类的根路径下创建一个同名的文件，即可覆盖框架默认提供的配置。</description>
+    </item>
+    
+    <item>
+      <title>自动化测试课程</title>
+      <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E8%AF%BE%E7%A8%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E8%AF%BE%E7%A8%8B/</guid>
+      <description>介绍 广义来说，自动化测试应该是比较难，它不仅仅是某个方面的测试；可以说，其他的测试手段或许都可以变成自动化的。例如：安全、性能测试等，大多数情况是人工来操作工具，然后获取报告；但，这些人工操作的过程是否可以变成自动的呢。我的看法是，只要技术可以满足，就是有可能的。
+据以上的观点，我这里要介绍的自动化测试课程会涉及很多内容。当然，所有的内容都是以实用为标准。
+基础理论 这里的基础理论大致包括：操作系统、协议等。
+不管是做接口测试还是性能测试，如果对原理性的东西不了解的话，只能是知道个皮毛。
+编程 除了大多数人在热追的Java、Python以外，还会讲解xml、html、JavaScript、批处理文件、shell脚本等。
+Java 我认为有些内容是测试人员必须要学习的：语法、集合、IO操作、各种配置文件的读写、多线程、Swing。
+而有一些Java框架也是非常值得去学习的。例如：JUnit、TestNG、Dom4j、Spring。
+XML XML作为一个非常流行的数据交换的格式，是非常重要的。我们至少要了解XML的语法、读写等。
+我没有把Selenium这个比较火热的WebUI自动化测试框架放在第一位上，是因为，编程是基础，是制约你继续前进的因素。只要把你的编程能力提升起来很多框架都不是问题了。
+至于一些框架，包括有：Selenium等。
+数据库 MySQL、Oracle、嵌入式数据库。
+应用服务器 Tomcat、Jetty、Nginx、Apache等。
+对于Web项目来说，都需要一个或者多个应用服务器来做支撑。而熟悉这些服务器的特点，学会进行配置，是非常重要的；尤其，你不希望永远只做黑盒测试。
+工具 Eclipse、Jenkins等。
+测试工具层出不穷，也断然是学习不完的，而终极办法就是——学会开发（改造）适合自己、团队的工具。
+Eclipse是个比较流行的开发工具，实践证明，很多人都会在开发工具的配置和使用上遇到很多问题，甚至直接导致放弃。
+Jenkins是个持续集成的平台。
+Maven Maven在项目管理（依赖、版本发布等）上使用的还是比较广泛的，也值得每位希望使用Java语言学习自动化测试的朋友们来多多研究。Maven可以在Eclipse或者其他开发工具中使用，也可以在命令行中使用。
+方案 任何工具都可能是针对特定场景、特定领域的，它不一定能很好地解决您目前遇到的问题，尤其当问题比较复杂、跨度大的时候。那么，这时候，你可以把多个工具改造，使用每个现有工具的一部分功能，然后整合起来。这样，就需要搭建一套特定业务的框架或者平台了。
+持续更新中。。。请关注、收藏！</description>
+    </item>
+    
+    <item>
+      <title>骨架</title>
+      <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E9%AA%A8%E6%9E%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://phoenix-autotest.github.io/phoenix.docs.site/docs/%E9%AA%A8%E6%9E%B6/</guid>
+      <description>地址 https://oss.sonatype.org/content/groups/public/archetype-catalog.xml
+温馨提示：由于中央仓库中的骨架文件比较大，我编写本文时的archetype-catalog.xml大小为6.69M。所以，添加后可能需要一段时间来下载。
+帮助 如果您不知道如何在Eclipse中添加Maven的骨架（archetype）的话，可以参考这篇博文：Maven骨架archetype。</description>
     </item>
     
   </channel>
