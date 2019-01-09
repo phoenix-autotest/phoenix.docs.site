@@ -11,6 +11,27 @@
     
     
     <item>
+      <title>快速入门</title>
+      <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/quick-start/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://phoenix-autotest.github.io/phoenix.docs.site/docs/quick-start/</guid>
+      <description> 本文档主要介绍selenium自动化框架PhoenixAutotest，并且会用一个简单的demo来描述如何使用该框架。
+预备知识  集成开发工具（例如：IntelliJ IDEA） Java 基础
+ HTML 基础  本文档是基于idea来编写的，而且会使用骨架，推荐使用idea。如果您对其他环境很熟悉，可以选择其他工具。
+框架介绍  框架是基于selenium的web自动化框架，通过该框架可以简化测试人员的学习难度，只需要编写少量的JAVA代码即可。 框架地址 https://github.com/LinuxSuRen/phoenix.webui.framework
+如果您需要查看源码，可以使用上面地址下载框架，如果刚刚入门，建议使用骨架。
+ webdriver驱动下载器源码地址
+github地址：https://github.com/LinuxSuRen/autotest.webdriver.downloader 自动化测试骨架的maven仓库地址
+http://mvnrepository.com/artifact/com.surenpi.autotest/autotest.web.framework.archetype   创建工程 按照如下的步骤插件示例工程
+注意：最新的骨架版本为  &amp;lt;groupId&amp;gt;com.surenpi.autotest&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;autotest.web.framework.archetype&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.0.3-SNAPSHOT&amp;lt;/version&amp;gt;  根据上述的向导完成后，参考工程的 README.md 中的描述执行示例。
+可能遇到的问题 如果运行demo后，启动浏览器后，但弹出chromedriver.exe停止工作，是驱动与版本不对应，请删除用户文件夹下的.autotest目录，并重新运行项目。
+如果最新版本驱动下载器不支持您当前的浏览器版本，可关闭自动下载驱动，手动下载驱动并在src/main/resources下的engine.properties文件中指定驱动路径。
+engine.autoLoad=false webdriver.chrome.driver=C:/Users/home/surenpi/.autotest/surenpi.com.chromedriver  如果运行demo后，无法正常关闭浏览器，请将shutdown方法修改为close方法,如下：
+try { phoenix.close(); } catch (IOException e) { e.printStackTrace();  </description>
+    </item>
+    
+    <item>
       <title>Selenium原生API</title>
       <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/selenium%E5%8E%9F%E7%94%9Fapi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -116,37 +137,6 @@ KaptchaInvoker 由于大部分图形验证码，都是把图片中的信息保�
 &amp;lt;suren:field name=&amp;quot;kaptcha&amp;quot; data=&amp;quot;data,http://localhost/kaptcha!getLastCode.do&amp;quot; type=&amp;quot;callback&amp;quot; callback=&amp;quot;KaptchaInvoker&amp;quot;&amp;gt; &amp;lt;/suren:field&amp;gt;  EngineInvoker 框架引擎。
 OSInvoker 执行操作系统本地命令。
 TestNGInvoker 调用TestNG。</description>
-    </item>
-    
-    <item>
-      <title>快速入门</title>
-      <link>http://phoenix-autotest.github.io/phoenix.docs.site/docs/quick-start/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://phoenix-autotest.github.io/phoenix.docs.site/docs/quick-start/</guid>
-      <description>前言 本文档主要介绍selenium自动化框架PhoenixAutotest，并且会用一个简单的demo来描述如何使用该框架。
-使用框架你需要了解的知识  开发者工具 IntelliJ IDEA   本文档是基于idea来编写的，而且会使用骨架，推荐使用idea。
-如果您对其他环境很熟悉，可以选择其他工具。
-2. java基础
-3. selenium知识
-本框架主要对selenium封装，但你需要了解selenium相关知识。
-框架及相关介绍  框架是基于selenium的web自动化框架，通过该框架可以简化测试人员的学习难度，只需要编写少量的JAVA代码即可。 框架地址
-github地址：https://github.com/LinuxSuRen/phoenix.webui.framework
-如果您需要查看源码，可以使用上面地址下载框架，如果刚刚入门，建议使用骨架。
- webdriver驱动下载器源码地址
-github地址：https://github.com/LinuxSuRen/autotest.webdriver.downloader 自动化测试骨架的maven仓库地址
-http://mvnrepository.com/artifact/com.surenpi.autotest/autotest.web.framework.archetype   使用骨架创建一个自动化测试工程  使用idea添加骨架
- 使用骨架创建maven项目
- 项目创建完成后，idea会自动下载，更新完成后的项目结构如下：
-  运行一个小demo  pom.xml文件中加入downloader依赖  &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.surenpi.autotest&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;autotest.webdriver.downloader&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0.2-20180128&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;  设置浏览器版本及地址
-在文件夹resources下，设置engine.properties文件内容为：
-engine.autoLoad=true chrome.version=64  版本号输入您所在电脑的谷歌浏览器版本
- 修改Test类中的Page类路径
- 运行Test类（GitHubTest 或 OSCTTest）
-Page类 定义入口及配置类，页面元素
-Test类 定义流程
- 运行成功后，chrome浏览器打开后访问url地址，搜索内容，并关闭浏览器。
-  可能遇到的问题 如果运行demo后，启动浏览器后，但弹出chromedriver.</description>
     </item>
     
     <item>
